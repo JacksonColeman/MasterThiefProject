@@ -12,7 +12,13 @@ body {
 .clicked-masterpiece{
   border-style: solid;
   border-width: 2px;
-  background-color: red;
+  background-color: green;
+}
+
+.grey-masterpiece{
+  border-style: dashed;
+  border-width: 2px;
+  background-color: grey;
 }
 
 .artrow {

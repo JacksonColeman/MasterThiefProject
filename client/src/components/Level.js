@@ -57,7 +57,7 @@ function Level ({levels, restart}) {
             <p>You are a professional art thief planning to rob a museum. Each painting is worth a certain value, the only constraint stopping you from robbing each of them is that adjacent paintings have security systems connected and it will automatically contact the police if two adjacent paintings were moved. Can you steal the maximum amount possible?</p>
             <p>Click the paintings you want to steal!</p>
             <div className="artrow">
-                {myLevel.masterpieces.map((m, index) => <Masterpiece m={m} addToSelected={addToSelected} removeFromSelected={removeFromSelected} grey={greyIndices.includes(index) ? true : false} idx={index}/>)}
+                {myLevel.masterpieces.map((m, index) => <Masterpiece m={m} addToSelected={addToSelected} removeFromSelected={removeFromSelected} grey={greyIndices.includes(index)} idx={index}/>)}
             </div>
             <p>Current Value of Stolen Paintings: {selectedSum}</p>
             <p>Maximum Value Possible: {rob2} </p>
