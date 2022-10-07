@@ -1,0 +1,2 @@
+class MasterpiecesController < ApplicationController
+end

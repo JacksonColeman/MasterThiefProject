@@ -1,6 +1,25 @@
 body {
-  background-color: silver;
+  background-color: whitesmoke;
   font-family: cursive;
+}
+
+.masterpiece{
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+.clicked-masterpiece{
+  border-style: solid;
+  border-width: 2px;
+  background-color: red;
+}
+
+.artrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5%;
 }
 
 .App {

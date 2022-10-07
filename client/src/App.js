@@ -5,10 +5,19 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from './components/Login';
 import NavBar from './components/NavBar';
 import Auth from './components/Auth';
+import Level from './components/Level';
 
 function App() {
   const [page, setPage] = useState("/")
   const [user, setUser] = useState(null)
+  const [levels, setLevels] = useState([])
+  const [restart, setRestart] = useState(false)
+
+    useEffect(() => {
+    fetch(`http://localhost:3000/levels`)
+      .then(res => res.json())
+      .then(setLevels)
+    }, [])
 
   function logout() {
     fetch("/logout", {method:'DELETE',})
@@ -17,6 +26,10 @@ function App() {
         setUser(null);
       }
     });
+  }
+
+  const updateRestart = () => {
+    setRestart(!restart)
   }
 
 
@@ -31,6 +44,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login user={user} setUser={setUser}/>
+          </Route>
+          <Route path="/play">
+            <Level levels={levels} restart={updateRestart}/>
           </Route>
           <Route path="/">
             <h1>MASTER THIEF</h1>
