@@ -61,7 +61,7 @@ function Level ({levels, restart}) {
             </div>
             <p>Current Value of Stolen Paintings: {selectedSum}</p>
             <p>Maximum Value Possible: {rob2} </p>
-            <CommentForm/>
+            {/* <CommentForm/> */}
         </div>
     )
 }

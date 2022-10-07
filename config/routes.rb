@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
   resources :masterpieces
   resources :levels
   resources :users
